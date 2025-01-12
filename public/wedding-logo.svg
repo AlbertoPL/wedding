@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Heart shape -->
+  <path d="M100 180C96.2 180 92.5 178.6 89.6 175.8C45.8 135.5 20 108.3 20 75C20 48.5 41.5 27 68 27C83.7 27 98.7 34.9 106 47.2C113.3 34.9 128.3 27 144 27C170.5 27 192 48.5 192 75C192 108.3 166.2 135.5 122.4 175.8C119.5 178.6 115.8 180 112 180H100Z" 
+        fill="#f56565"/>
+  
+  <!-- Text A&A -->
+  <text x="100" y="110" 
+        font-family="Times New Roman" 
+        font-size="48" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#ffffff">
+    A&amp;A
+  </text>
+</svg>
