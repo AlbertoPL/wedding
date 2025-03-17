@@ -137,7 +137,48 @@
                     navMenu.classList.remove('active');
                 });
             });
+
+            // Lightbox functionality
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeButton = document.querySelector('.close-lightbox');
+
+            // Add click handlers to all gallery images
+            document.querySelectorAll('.gallery-img, .story-photo').forEach(image => {
+                image.addEventListener('click', () => {
+                    lightboxImg.src = image.src;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+                });
+            });
+
+            // Close lightbox when clicking the X
+            closeButton.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+
+            // Close lightbox when clicking outside the image
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+
+            // Close lightbox with escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
         });
     </script>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 </body>
 </html>
