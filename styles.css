@@ -1,0 +1,308 @@
+:root {
+    --autumn-orange: #ff6b2b;
+    --deep-black: #1a1a1a;
+    --light-black: #2d2d2d;
+    --golden-orange: #ffa500;
+    --light-orange: #ffcb8e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--deep-black);
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+.nav-gothic {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid var(--autumn-orange);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-gothic ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.nav-gothic ul li {
+    margin: 0 2rem;
+}
+
+.nav-gothic ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-gothic ul li a:hover {
+    color: var(--autumn-orange);
+}
+
+/* Hero Section */
+.autumn-bg {
+    background-image: url('autumn-trees.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.autumn-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.autumn-bg > * {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--autumn-orange);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--light-orange);
+    font-size: 2em;
+    margin-top: 2rem;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Story Section Styles */
+.story-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.story-moment {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 1rem;
+    background: var(--light-black);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.story-moment:hover {
+    transform: translateY(-10px);
+}
+
+.story-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Photo Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Venue Section Styles */
+.venue-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.venue-info {
+    padding: 2rem;
+    background: var(--light-black);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.venue-description {
+    margin: 1.5rem 0;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
+
+/* Section Headers */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--autumn-orange);
+    margin-bottom: 2rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+h3 {
+    color: var(--golden-orange);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--deep-black);
+    margin-top: 2rem;
+    border-top: 2px solid var(--autumn-orange);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-gothic ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-gothic ul li {
+        margin: 0.5rem 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .story-moment, .venue-info {
+        min-width: 100%;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .map-container iframe {
+        height: 100%;
+    }
+}
+
+/* Animation for falling leaves */
+@keyframes fallingLeaves {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.parking-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.parking-info h4 {
+    color: var(--golden-orange);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.rsvp-container {
+    background: var(--light-black);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.rsvp-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--autumn-orange), var(--golden-orange));
+    border-radius: 10px 10px 0 0;
+}
+
+.rsvp-container iframe {
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+/* Google Forms confirmation page styling */
+.freebirdFormviewerViewResponseConfirmContentContainer {
+    background: var(--light-black) !important;
+    color: white !important;
+    padding: 2rem !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+}
+
+.freebirdFormviewerViewResponseConfirmTitleContainer {
+    color: var(--autumn-orange) !important;
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 2rem !important;
+}
