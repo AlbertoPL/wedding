@@ -143,8 +143,8 @@
             const lightboxImg = document.getElementById('lightbox-img');
             const closeButton = document.querySelector('.close-lightbox');
 
-            // Add click handlers to all gallery images
-            document.querySelectorAll('.gallery-img, .story-photo').forEach(image => {
+            // Add click handlers to ONLY gallery images (removed .story-photo)
+            document.querySelectorAll('.gallery-img').forEach(image => {
                 image.addEventListener('click', () => {
                     lightboxImg.src = image.src;
                     lightbox.classList.add('active');
