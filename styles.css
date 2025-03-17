@@ -364,3 +364,72 @@ footer p {
     margin: 5px 0;
     transition: all 0.3s ease;
 }
+
+/* First, ensure the hamburger is hidden by default */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+/* Regular nav menu styles */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    /* Style the hamburger lines */
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--autumn-orange);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Hide regular menu by default on mobile */
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Show menu when active */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Animate hamburger to X when active */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
