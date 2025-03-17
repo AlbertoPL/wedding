@@ -27,27 +27,28 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    padding: 0.5rem;
 }
 
-.nav-gothic ul {
+.nav-menu {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 1rem 0;
 }
 
-.nav-gothic ul li {
+.nav-menu li {
     margin: 0 2rem;
 }
 
-.nav-gothic ul li a {
+.nav-menu li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
-.nav-gothic ul li a:hover {
+.nav-menu li a:hover {
     color: var(--autumn-orange);
 }
 
@@ -235,12 +236,16 @@ footer p {
         height: 100vh;
         background: rgba(0, 0, 0, 0.95);
         padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-menu.active {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 1.5rem 0;
     }
 
     .hamburger.active span:nth-child(1) {
@@ -255,16 +260,21 @@ footer p {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .nav-gothic ul li {
-        margin: 1.5rem 0;
+    /* Additional mobile fixes */
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .story-moment, .venue-info {
+        min-width: 100%;
     }
 
     h1 {
         font-size: 3rem;
     }
 
-    .story-moment, .venue-info {
-        min-width: 100%;
+    h2 {
+        font-size: 2rem;
     }
 
     .map-container {
