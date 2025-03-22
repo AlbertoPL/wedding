@@ -17,6 +17,7 @@ body {
     color: #fff;
     font-family: 'Cormorant Garamond', serif;
     line-height: 1.6;
+    padding-top: 60px; /* Add space for fixed navigation */
 }
 
 /* Navigation Styles */
@@ -103,6 +104,7 @@ h1 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    min-height: calc(100vh - 160px); /* Account for header and footer */
 }
 
 /* Story Section Styles */
