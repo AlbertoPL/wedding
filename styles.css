@@ -1,11 +1,9 @@
 :root {
-    --autumn-brown: #8B4513;
-    --autumn-rust: #D35400;
-    --autumn-gold: #DAA520;
-    --autumn-cream: #FDF5E6;
-    --autumn-sage: #707D5A;
-    --autumn-burgundy: #800020;
-    --forest-green: #1B3409;
+    --bright-orange: #FF5733;  /* The orange from your text */
+    --purple: #9932CC;         /* The purple from your text */
+    --sage-green: #8FA885;     /* The leaf color */
+    --black: #000000;          /* Background color */
+    --white: #FFFFFF;          /* For accents and some text */
     --heading-font: Cambria, 'Times New Roman', serif;
     --body-font: Cambria, 'Times New Roman', serif;
 }
@@ -17,8 +15,8 @@
 }
 
 body {
-    background-color: var(--autumn-cream);
-    color: var(--autumn-brown);
+    background-color: var(--black);
+    color: var(--white);
     font-family: var(--body-font);
     line-height: 1.6;
     padding-top: 60px; /* Add space for fixed navigation */
@@ -26,8 +24,8 @@ body {
 
 /* Navigation Styles */
 .nav-gothic {
-    background: rgba(27, 52, 9, 0.95);
-    border-bottom: 2px solid var(--autumn-gold);
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid var(--bright-orange);
     position: fixed;
     width: 100%;
     top: 0;
@@ -47,14 +45,14 @@ body {
 }
 
 .nav-menu li a {
-    color: var(--autumn-cream);
+    color: var(--white);
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .nav-menu li a:hover {
-    color: var(--autumn-gold);
+    color: var(--purple);
 }
 
 /* Hero Section */
@@ -91,7 +89,7 @@ body {
 
 h1 {
     font-family: var(--heading-font);
-    color: var(--autumn-cream);
+    color: var(--purple);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 4.5rem;
     margin-bottom: 1rem;
@@ -99,7 +97,7 @@ h1 {
 
 h2 {
     font-family: var(--heading-font);
-    color: var(--autumn-gold);
+    color: var(--bright-orange);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     text-align: center;
     font-size: 2.5rem;
@@ -107,7 +105,7 @@ h2 {
 }
 
 .date {
-    color: var(--autumn-cream);
+    color: var(--bright-orange);
     font-size: 2em;
     margin-top: 2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -119,6 +117,30 @@ h2 {
     margin: 0 auto;
     padding: 4rem 2rem;
     min-height: calc(100vh - 160px); /* Account for header and footer */
+    position: relative;
+}
+
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('path-to-floral-corner.png'); /* You'll need to create this */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container::before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+
+.container::after {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
 }
 
 /* Story Section Styles */
@@ -135,11 +157,11 @@ h2 {
     min-width: 300px;
     text-align: center;
     padding: 1rem;
-    background: white;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     transition: transform 0.3s ease;
-    border: 1px solid var(--autumn-brown);
-    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+    border: 1px solid var(--sage-green);
+    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
 }
 
 .story-moment:hover {
@@ -155,7 +177,7 @@ h2 {
 }
 
 .story-moment h3 {
-    color: var(--autumn-burgundy);
+    color: var(--purple);
 }
 
 /* Photo Gallery Styles */
@@ -173,8 +195,8 @@ h2 {
     border-radius: 8px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    border: 3px solid var(--autumn-cream);
-    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.2);
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
 }
 
 .gallery-img:hover {
@@ -191,11 +213,11 @@ h2 {
 
 .venue-info {
     padding: 2rem;
-    background: white;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     text-align: center;
-    border: 1px solid var(--autumn-brown);
-    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+    border: 1px solid var(--sage-green);
+    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
 }
 
 .venue-description {
@@ -205,7 +227,7 @@ h2 {
 }
 
 .venue-info h3 {
-    color: var(--autumn-burgundy);
+    color: var(--purple);
 }
 
 .map-container {
@@ -223,7 +245,7 @@ h2 {
 /* Section Headers */
 h3 {
     font-family: var(--heading-font);
-    color: var(--autumn-gold);
+    color: var(--purple);
     margin: 1rem 0;
     font-size: 1.5rem;
 }
@@ -232,10 +254,10 @@ h3 {
 footer {
     text-align: center;
     padding: 2rem;
-    background: var(--forest-green);
+    background: var(--black);
     margin-top: 2rem;
-    border-top: 2px solid var(--autumn-gold);
-    color: var(--autumn-cream);
+    border-top: 2px solid var(--bright-orange);
+    color: var(--white);
 }
 
 footer p {
@@ -330,16 +352,16 @@ footer p {
 }
 
 .parking-info h4 {
-    color: var(--autumn-rust);
+    color: var(--purple);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 .rsvp-container {
-    background: white;
+    background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
     position: relative;
 }
 
@@ -350,7 +372,7 @@ footer p {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--autumn-burgundy), var(--autumn-gold));
+    background: linear-gradient(90deg, var(--purple), var(--bright-orange));
     border-radius: 10px 10px 0 0;
 }
 
@@ -361,15 +383,15 @@ footer p {
 
 /* Google Forms confirmation page styling */
 .freebirdFormviewerViewResponseConfirmContentContainer {
-    background: var(--autumn-cream) !important;
-    color: var(--autumn-brown) !important;
+    background: var(--white) !important;
+    color: var(--black) !important;
     padding: 2rem !important;
     border-radius: 10px !important;
     text-align: center !important;
 }
 
 .freebirdFormviewerViewResponseConfirmTitleContainer {
-    color: var(--autumn-gold) !important;
+    color: var(--purple) !important;
     font-family: 'Great Vibes', cursive !important;
     font-size: 2rem !important;
 }
@@ -385,7 +407,7 @@ footer p {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--autumn-cream);
+    background-color: var(--bright-orange);
     margin: 5px 0;
     transition: all 0.3s ease;
 }
@@ -421,7 +443,7 @@ footer p {
         display: block;
         width: 25px;
         height: 3px;
-        background-color: var(--autumn-cream);
+        background-color: var(--bright-orange);
         margin: 5px 0;
         transition: all 0.3s ease;
     }
@@ -481,7 +503,7 @@ footer p {
     max-width: 90%;
     max-height: 90vh;
     object-fit: contain;
-    border: 3px solid var(--autumn-gold);
+    border: 3px solid var(--purple);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -489,7 +511,7 @@ footer p {
     position: absolute;
     top: 20px;
     right: 30px;
-    color: var(--autumn-cream);
+    color: var(--white);
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -497,7 +519,7 @@ footer p {
 }
 
 .close-lightbox:hover {
-    color: var(--autumn-gold);
+    color: var(--bright-orange);
 }
 
 .countdown {
@@ -505,10 +527,10 @@ footer p {
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
-    background: rgba(27, 52, 9, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid var(--autumn-gold);
+    border: 2px solid var(--bright-orange);
 }
 
 .countdown-item {
@@ -519,7 +541,7 @@ footer p {
 }
 
 .countdown-item span {
-    color: var(--autumn-cream);
+    color: var(--white);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -531,7 +553,7 @@ footer p {
 .countdown-item .label {
     font-size: 1.2rem;
     margin-top: 0.5rem;
-    color: var(--autumn-gold);
+    color: var(--purple);
 }
 
 @media (max-width: 768px) {
@@ -561,21 +583,21 @@ footer p {
 }
 
 .timeline-item {
-    background: white;
-    border: 1px solid var(--autumn-brown);
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--sage-green);
     border-radius: 10px;
     padding: 1.5rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
 }
 
 .timeline-item h3 {
-    color: var(--autumn-burgundy);
+    color: var(--purple);
     margin-bottom: 0.5rem;
 }
 
 .timeline-item h4 {
-    color: var(--autumn-rust);
+    color: var(--purple);
     margin-bottom: 1rem;
 }
 
@@ -585,12 +607,12 @@ footer p {
 }
 
 .travel-info {
-    background: white;
-    border: 1px solid var(--autumn-brown);
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--sage-green);
     border-radius: 10px;
     padding: 2rem;
     margin-top: 1rem;
-    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
 }
 
 .travel-item {
@@ -598,7 +620,7 @@ footer p {
 }
 
 .travel-item h4 {
-    color: var(--autumn-burgundy);
+    color: var(--purple);
     margin-bottom: 1rem;
 }
 
@@ -620,14 +642,24 @@ footer p {
 }
 
 .faq-item {
-    background: white;
-    border: 1px solid var(--autumn-brown);
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--sage-green);
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
 }
 
 .faq-item h3 {
-    color: var(--autumn-burgundy);
+    color: var(--purple);
     margin-bottom: 1rem;
+}
+
+/* Buttons and Links */
+.hotel-link {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.hotel-link:hover {
+    background-color: var(--bright-orange);
 }
