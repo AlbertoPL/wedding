@@ -9,14 +9,41 @@
 </head>
 <body>
     <header>
-        <!-- Same navigation as index.html -->
+        <nav class="nav-gothic">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="venue.html">Venue</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section id="our-story" class="container">
             <h2>Our Story</h2>
             <div class="story-timeline">
-                <!-- Story content -->
+                <div class="story-moment">
+                    <img src="images/popsbar.jpeg" alt="Pop's Bar - How we met" class="story-photo">
+                    <h3>How We Met</h3>
+                    <p>Once upon a time, our mutual friend Katie got a new roommate. She invited Aries, her new roommate, to come to Pop's Bar where Roger Niner Karaoke was hosting. Alberto was already there, and she introduced him to her roommate. They hit it off after learning about their mutual fondness of power metal. After karaoke, Alberto was going to go for a burrito, but Aries invited him over to play Mario Kart instead. The rest is history.</p>
+                </div>
+                <div class="story-moment">
+                    <img src="images/Marnee-Thai-Restaurant_9bca5a46628289570cbfc2a582804266.jpg" alt="Marnee Thai - First date" class="story-photo">
+                    <h3>First Date</h3>
+                    <p>Alberto decided to take Aries out on a date to Marnee Thai. That's when both of them learned about each others' love of spicy food. It was after that date that he invited her out to a 1920's themed party that he himself was invited to by his roommates Nitin and Neel.</p>
+                </div>
+                <div class="story-moment">
+                    <img src="images/rincon-park-1-640x427.jpg" alt="Rincon Park - Proposal" class="story-photo">
+                    <h3>The Proposal</h3>
+                    <p>After being separated all summer due to Aries' summer job at the Santa Fe Opera, they found themselves back in San Francisco where they met. After going out for a croissant at the suggestion of Nitin, Alberto and Aries chose to eat in front of the Bay Bridge where he got the opportunity to discreetly ask Aries' hand in marraige. She said yes.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -25,7 +52,22 @@
         <!-- Same footer as index.html -->
     </footer>
     <script>
-        // Hamburger menu JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+    
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+    
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
     </script>
 </body>
 </html> 

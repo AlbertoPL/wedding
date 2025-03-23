@@ -1,9 +1,11 @@
 :root {
-    --autumn-orange: #ff6b2b;
-    --deep-black: #1a1a1a;
-    --light-black: #2d2d2d;
-    --golden-orange: #ffa500;
-    --light-orange: #ffcb8e;
+    --autumn-brown: #8B4513;
+    --autumn-rust: #D35400;
+    --autumn-gold: #DAA520;
+    --autumn-cream: #FDF5E6;
+    --autumn-sage: #707D5A;
+    --autumn-burgundy: #800020;
+    --forest-green: #1B3409;
 }
 
 * {
@@ -13,8 +15,8 @@
 }
 
 body {
-    background-color: var(--deep-black);
-    color: #fff;
+    background-color: var(--autumn-cream);
+    color: var(--autumn-brown);
     font-family: 'Cormorant Garamond', serif;
     line-height: 1.6;
     padding-top: 60px; /* Add space for fixed navigation */
@@ -22,8 +24,8 @@ body {
 
 /* Navigation Styles */
 .nav-gothic {
-    background: rgba(0, 0, 0, 0.95);
-    border-bottom: 2px solid var(--autumn-orange);
+    background: rgba(27, 52, 9, 0.95);
+    border-bottom: 2px solid var(--autumn-gold);
     position: fixed;
     width: 100%;
     top: 0;
@@ -43,19 +45,20 @@ body {
 }
 
 .nav-menu li a {
-    color: #fff;
+    color: var(--autumn-cream);
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .nav-menu li a:hover {
-    color: var(--autumn-orange);
+    color: var(--autumn-gold);
 }
 
 /* Hero Section */
 .autumn-bg {
-    background-image: url('autumn-trees.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('autumn-trees.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -86,17 +89,26 @@ body {
 
 h1 {
     font-family: 'Great Vibes', cursive;
-    color: var(--autumn-orange);
+    color: var(--autumn-cream);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 4.5rem;
     margin-bottom: 1rem;
 }
 
+h2 {
+    color: var(--autumn-gold);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 2rem;
+}
+
 .date {
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--light-orange);
+    color: var(--autumn-cream);
     font-size: 2em;
     margin-top: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Container */
@@ -121,9 +133,11 @@ h1 {
     min-width: 300px;
     text-align: center;
     padding: 1rem;
-    background: var(--light-black);
+    background: white;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    border: 1px solid var(--autumn-brown);
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
 }
 
 .story-moment:hover {
@@ -136,6 +150,10 @@ h1 {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
+}
+
+.story-moment h3 {
+    color: var(--autumn-burgundy);
 }
 
 /* Photo Gallery Styles */
@@ -153,6 +171,8 @@ h1 {
     border-radius: 8px;
     transition: transform 0.3s ease;
     cursor: pointer;
+    border: 3px solid var(--autumn-cream);
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.2);
 }
 
 .gallery-img:hover {
@@ -169,15 +189,21 @@ h1 {
 
 .venue-info {
     padding: 2rem;
-    background: var(--light-black);
+    background: white;
     border-radius: 10px;
     text-align: center;
+    border: 1px solid var(--autumn-brown);
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
 }
 
 .venue-description {
     margin: 1.5rem 0;
     line-height: 1.6;
     font-style: italic;
+}
+
+.venue-info h3 {
+    color: var(--autumn-burgundy);
 }
 
 .map-container {
@@ -193,16 +219,8 @@ h1 {
 }
 
 /* Section Headers */
-h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--autumn-orange);
-    margin-bottom: 2rem;
-    font-family: 'Great Vibes', cursive;
-}
-
 h3 {
-    color: var(--golden-orange);
+    color: var(--autumn-gold);
     margin: 1rem 0;
     font-size: 1.5rem;
 }
@@ -211,9 +229,10 @@ h3 {
 footer {
     text-align: center;
     padding: 2rem;
-    background: var(--deep-black);
+    background: var(--forest-green);
     margin-top: 2rem;
-    border-top: 2px solid var(--autumn-orange);
+    border-top: 2px solid var(--autumn-gold);
+    color: var(--autumn-cream);
 }
 
 footer p {
@@ -308,16 +327,16 @@ footer p {
 }
 
 .parking-info h4 {
-    color: var(--golden-orange);
+    color: var(--autumn-rust);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 .rsvp-container {
-    background: var(--light-black);
+    background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
     position: relative;
 }
 
@@ -328,7 +347,7 @@ footer p {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--autumn-orange), var(--golden-orange));
+    background: linear-gradient(90deg, var(--autumn-burgundy), var(--autumn-gold));
     border-radius: 10px 10px 0 0;
 }
 
@@ -339,15 +358,15 @@ footer p {
 
 /* Google Forms confirmation page styling */
 .freebirdFormviewerViewResponseConfirmContentContainer {
-    background: var(--light-black) !important;
-    color: white !important;
+    background: var(--autumn-cream) !important;
+    color: var(--autumn-brown) !important;
     padding: 2rem !important;
     border-radius: 10px !important;
     text-align: center !important;
 }
 
 .freebirdFormviewerViewResponseConfirmTitleContainer {
-    color: var(--autumn-orange) !important;
+    color: var(--autumn-gold) !important;
     font-family: 'Great Vibes', cursive !important;
     font-size: 2rem !important;
 }
@@ -363,7 +382,7 @@ footer p {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--autumn-orange);
+    background-color: var(--autumn-cream);
     margin: 5px 0;
     transition: all 0.3s ease;
 }
@@ -399,7 +418,7 @@ footer p {
         display: block;
         width: 25px;
         height: 3px;
-        background-color: var(--autumn-orange);
+        background-color: var(--autumn-cream);
         margin: 5px 0;
         transition: all 0.3s ease;
     }
@@ -445,7 +464,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(139, 69, 19, 0.95);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -459,7 +478,7 @@ footer p {
     max-width: 90%;
     max-height: 90vh;
     object-fit: contain;
-    border: 2px solid var(--autumn-orange);
+    border: 3px solid var(--autumn-gold);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -467,7 +486,7 @@ footer p {
     position: absolute;
     top: 20px;
     right: 30px;
-    color: var(--autumn-orange);
+    color: var(--autumn-cream);
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -475,5 +494,58 @@ footer p {
 }
 
 .close-lightbox:hover {
-    color: var(--golden-orange);
+    color: var(--autumn-gold);
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    background: rgba(27, 52, 9, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--autumn-gold);
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.countdown-item span {
+    color: var(--autumn-cream);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-item span:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.countdown-item .label {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--autumn-gold);
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .countdown-item {
+        min-width: 70px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 2rem;
+    }
+
+    .countdown-item .label {
+        font-size: 1rem;
+    }
 }
