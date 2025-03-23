@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venue - Alberto & Aries</title>
+    <title>FAQ - Alberto & Aries</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,31 +28,37 @@
     </header>
 
     <main>
-        <section id="venue" class="container">
-            <h2>Celebration Details</h2>
-            <div class="venue-details">
-                <div class="venue-info">
-                    <h3>Ceremony & Reception</h3>
-                    <p class="time">4:00 PM</p>
-                    <p class="location">Playa Studios</p>
-                    <p class="address">11260 Playa Court<br>Culver City, CA 90230</p>
-                    <p class="venue-description">A modern industrial space in the heart of Culver City, featuring exposed brick walls, high ceilings, and abundant natural light.</p>
-                    <div class="parking-info">
-                        <h4>Parking</h4>
-                        <p>Valet parking service will be provided for all guests.</p>
-                    </div>
+        <section id="faq" class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is the dress code?</h3>
+                    <p>TBD</p>
                 </div>
-                
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.2389334471509!2d-118.41149862427145!3d34.01651897297043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2ba3bc295695d:0x54eec35f2acf96c6!2s11260+Playa+Ct%2C+Culver+City%2C+CA+90230!5e0!3m2!1sen!2sus!4v1710876044799!5m2!1sen!2sus"
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+
+                <div class="faq-item">
+                    <h3>Is the venue indoor or outdoor?</h3>
+                    <p>The venue is indoor.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Will there be a bar?</h3>
+                    <p>It's an open bar with beer and cocktails.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I bring a plus one?</h3>
+                    <p>Please refer to your invitation for details about guest arrangements.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Are children welcome?</h3>
+                    <p>Yes!</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What time should I arrive?</h3>
+                    <p>Please arrive 15-30 minutes before the ceremony start time of 5:00 PM.</p>
                 </div>
             </div>
         </section>
@@ -62,16 +68,17 @@
         <p>We can't wait to celebrate with you!</p>
         <p>#AlbertoAndAries2025</p>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
-    
+
             hamburger.addEventListener('click', function() {
                 hamburger.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
-    
+
             document.querySelectorAll('.nav-menu a').forEach(link => {
                 link.addEventListener('click', () => {
                     hamburger.classList.remove('active');

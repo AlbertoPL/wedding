@@ -6,6 +6,8 @@
     --autumn-sage: #707D5A;
     --autumn-burgundy: #800020;
     --forest-green: #1B3409;
+    --heading-font: Cambria, 'Times New Roman', serif;
+    --body-font: Cambria, 'Times New Roman', serif;
 }
 
 * {
@@ -17,7 +19,7 @@
 body {
     background-color: var(--autumn-cream);
     color: var(--autumn-brown);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--body-font);
     line-height: 1.6;
     padding-top: 60px; /* Add space for fixed navigation */
 }
@@ -88,7 +90,7 @@ body {
 }
 
 h1 {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--heading-font);
     color: var(--autumn-cream);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 4.5rem;
@@ -96,11 +98,11 @@ h1 {
 }
 
 h2 {
+    font-family: var(--heading-font);
     color: var(--autumn-gold);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     text-align: center;
     font-size: 2.5rem;
-    font-family: 'Great Vibes', cursive;
     margin-bottom: 2rem;
 }
 
@@ -220,6 +222,7 @@ h2 {
 
 /* Section Headers */
 h3 {
+    font-family: var(--heading-font);
     color: var(--autumn-gold);
     margin: 1rem 0;
     font-size: 1.5rem;
@@ -548,4 +551,83 @@ footer p {
     .countdown-item .label {
         font-size: 1rem;
     }
+}
+
+/* Schedule Page Styles */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.timeline-item {
+    background: white;
+    border: 1px solid var(--autumn-brown);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+}
+
+.timeline-item h3 {
+    color: var(--autumn-burgundy);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item h4 {
+    color: var(--autumn-rust);
+    margin-bottom: 1rem;
+}
+
+/* Travel Page Styles */
+.travel-section {
+    margin-bottom: 3rem;
+}
+
+.travel-info {
+    background: white;
+    border: 1px solid var(--autumn-brown);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+}
+
+.travel-item {
+    margin-bottom: 2rem;
+}
+
+.travel-item h4 {
+    color: var(--autumn-burgundy);
+    margin-bottom: 1rem;
+}
+
+.hotel-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hotel-block li {
+    margin-bottom: 2rem;
+}
+
+/* FAQ Page Styles */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid var(--autumn-brown);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
+}
+
+.faq-item h3 {
+    color: var(--autumn-burgundy);
+    margin-bottom: 1rem;
 }

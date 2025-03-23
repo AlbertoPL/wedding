@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - Alberto & Aries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-gothic">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="venue.html">Venue</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="travel" class="container">
+            <h2>Travel Information</h2>
+            
+            <div class="travel-section">
+                <h3>Airports</h3>
+                <div class="travel-info">
+                    <div class="travel-item">
+                        <h4>LAX - Los Angeles International Airport</h4>
+                        <p>Distance to venue: 5 miles</p>
+                        <p>Estimated travel time: 15-20 minutes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="travel-section">
+                <h3>Recommended Hotels</h3>
+                <div class="travel-info">
+                    <div class="hotel-block">
+                        <ul>
+                            <li>
+                                <strong>The Shay, a Destination by Hyatt Hotel</strong>
+                                <p>8801 Washington Blvd, Culver City, CA 90232</p>
+                                <p>2.5 miles from venue</p>
+                                <p>Boutique hotel in the heart of Culver City with rooftop pool and dining</p>
+                                <a href="https://www.hyatt.com/destination-by-hyatt/en-US/laxdi-the-shay/" target="_blank" class="hotel-link">Book Here</a>
+                            </li>
+                            <li>
+                                <strong>Courtyard by Marriott Los Angeles Westside</strong>
+                                <p>6333 Bristol Parkway, Culver City, CA 90230</p>
+                                <p>1.2 miles from venue</p>
+                                <p>Closest hotel to the venue, located in Culver City</p>
+                                <a href="https://www.marriott.com/en-us/hotels/laxcv-courtyard-los-angeles-westside/overview/" target="_blank" class="hotel-link">Book Here</a>
+                            </li>
+                            <li>
+                                <strong>Four Points by Sheraton Los Angeles Westside</strong>
+                                <p>5990 Green Valley Circle, Culver City, CA 90230</p>
+                                <p>1.5 miles from venue</p>
+                                <p>Comfortable hotel with on-site restaurant</p>
+                                <a href="https://www.marriott.com/en-us/hotels/laxfp-four-points-los-angeles-westside/overview/" target="_blank" class="hotel-link">Book Here</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="travel-section">
+                <h3>Transportation</h3>
+                <div class="travel-info">
+                    <div class="travel-item">
+                        <h4>From LAX</h4>
+                        <ul>
+                            <li>Uber/Lyft: ~15-20 minutes, estimated $25-35</li>
+                            <li>Taxi: ~15-20 minutes, estimated $35-45</li>
+                            <li>Rental Car: All major rental companies available at LAX</li>
+                        </ul>
+                    </div>
+                    <div class="travel-item">
+                        <h4>Parking at Venue</h4>
+                        <p>Valet parking will be provided for all guests at Playa Studios</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>We can't wait to celebrate with you!</p>
+        <p>#AlbertoAndAries2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
