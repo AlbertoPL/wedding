@@ -183,7 +183,7 @@ h2 {
 /* Photo Gallery Styles */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -634,24 +634,43 @@ footer p {
 }
 
 /* FAQ Page Styles */
-.faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+section.container .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.faq-item {
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid var(--sage-green);
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(143, 168, 133, 0.2);
+section.container .faq-item {
+    margin-bottom: 2rem;
 }
 
-.faq-item h3 {
-    color: var(--purple);
-    margin-bottom: 1rem;
+section.container .faq-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+section.container .faq-item p {
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    section.container .faq-container {
+        padding: 1rem;
+    }
+
+    section.container .faq-item h3 {
+        font-size: 1.2rem;
+    }
+
+    section.container .faq-item p {
+        font-size: 1rem;
+    }
 }
 
 /* Buttons and Links */
